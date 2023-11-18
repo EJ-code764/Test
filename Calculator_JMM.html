@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CALCULATOR</title>
+        <meta charset="utf-8">
+        <style>
+            *{
+                font-family: sans-serif;
+            }
+            h1{
+                text-align: center;
+            }
+            .num{
+                height: 35px;
+                width: 300px;
+                background-color: aqua;
+                color:blueviolet;
+                font-size: 25px;
+                font-weight: bold;
+                border-radius: 20px;
+                text-align: center;
+            }
+            .result{
+                height: 40px;
+                width: 300px;
+                background-color:bisque;
+                color:blueviolet;
+                font-size: 25px;
+                font-weight: bold;
+                border-radius: 12px;
+                text-align: center;
+            }
+            .button{
+                height: 40px;
+                width: 190px;
+                background-color:bisque;
+                color:blueviolet;
+                font-size: 25px;
+                font-weight: bold;
+                border-radius: 12px;
+                
+            }
+            form{
+                height: 350px;
+                width: 400px;
+                margin-right: auto;
+                margin-left: auto;
+                border: 2px solid black;
+                padding: 30px;
+                border-radius: 20px;
+            }
+            body{
+                padding: 80px; 
+            }
+        </style>
+       <script language="javascript" type="text/javascript">
+        function multiply(){
+            a=Number(document.calculator.number1.value);
+            b=Number(document.calculator.number2.value);
+            c=a*b;
+            document.calculator.total.value=c;
+        }
+       </script>
+       <script language="javascript" type="text/javascript">
+        function addition(){
+            a=Number(document.calculator.number1.value);
+            b=Number(document.calculator.number2.value);
+            c=a+b;
+            document.calculator.total.value=c;
+        }
+       </script>
+       <script language="javascript" type="text/javascript">
+        function subtraction(){
+            a=Number(document.calculator.number1.value);
+            b=Number(document.calculator.number2.value);
+            c=a-b;
+            document.calculator.total.value=c;
+        }
+       </script>
+       <script language="javascript" type="text/javascript">
+        function division(){
+            a=Number(document.calculator.number1.value);
+            b=Number(document.calculator.number2.value);
+            c=a/b;
+            document.calculator.total.value=c;
+        }
+       </script>
+       <script language="javascript" type="text/javascript">
+        function modulus(){
+            a=Number(document.calculator.number1.value);
+            b=Number(document.calculator.number2.value);
+            c=a%b;
+            document.calculator.total.value=c;
+        }
+       </script>
+        <script language="javascript" type="text/javascript">
+            function Clear(){
+            ""=Number(document.calculator.number1.value);
+            ""=Number(document.calculator.number2.value);
+            document.calculator.total.value="";
+            }
+           </script>
+       
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <form name="calculator">
+           Number 1: <input type="number" name="number1" class="num"><br><br>
+           Number 2: <input type="number" name="number2" class="num"><br><br>
+           Get result: <input type="text" name="total" class="result"><br>
+            <br><br>
+           <input type="button" value="+" onclick="javascript:addition();" class="button">
+           <input type="button" value="-" onclick="javascript:subtraction();" class="button"><br><br>
+           <input type="button" value="*" onclick="javasscript:multiply();" class="button">
+           <input type="button" value="/" onclick="javascript:division();" class="button"><br><br>
+           <input type="button" value="%" onclick="javascript:modulus();" class="button">
+           <button onclick="Clear();" class="button"> AC</button>
+
+        </form>
+      
+    </body>
+</html>
